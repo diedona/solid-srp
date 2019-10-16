@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DDona.Solid.SRP.AppConsole.Managers
 {
-    public class WorkReport : IManager
+    public class WorkReport : IManager<WorkReportEntry>
     {
         private readonly List<WorkReportEntry> _entries;
 

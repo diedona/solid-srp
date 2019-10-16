@@ -6,12 +6,12 @@ using System.Text;
 
 namespace DDona.Solid.SRP.AppConsole.FileSavers
 {
-    public abstract class BaseSaver
+    public abstract class BaseSaver<T>
     {
-        protected readonly IManager _reportManager;
+        protected readonly IManager<T> _reportManager;
         protected readonly string _fileFormat;
 
-        public BaseSaver(IManager reportManager, string fileFormat)
+        public BaseSaver(IManager<T> reportManager, string fileFormat)
         {
             _reportManager = reportManager;
             _fileFormat = fileFormat;

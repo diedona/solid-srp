@@ -15,7 +15,7 @@ namespace DDona.Solid.SRP.AppConsole
             report.Add(new WorkReportEntry { ProjectCode = "987Fc", ProjectName = "Project2", SpentHours = 3 });
             report.Add(new WorkReportEntry { ProjectCode = "aaa33", ProjectName = "Three", SpentHours = 18 });
 
-            var savers = new List<BaseSaver>() { new TxtSaver(report), new CSVSaver(report) };
+            var savers = new List<BaseSaver<WorkReportEntry>>() { new TxtSaver<WorkReportEntry>(report), new CSVSaver<WorkReportEntry>(report) };
             foreach (var saver in savers)
             {
                 saver.SaveToFile("Reports", "WorkReport");

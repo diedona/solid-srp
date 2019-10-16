@@ -5,10 +5,10 @@ using System.Text;
 
 namespace DDona.Solid.SRP.AppConsole.Managers
 {
-    public interface IManager
+    public interface IManager<T>
     {
-        void Add(WorkReportEntry entry);
-        void Remove(WorkReportEntry entry);
-        IReadOnlyList<WorkReportEntry> GetEntries();
+        void Add(T entry);
+        void Remove(T entry);
+        IReadOnlyList<T> GetEntries();
     }
 }
